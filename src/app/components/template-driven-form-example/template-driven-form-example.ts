@@ -12,9 +12,17 @@ import { EPerson } from 'src/app/shared/interfaces/eperson';
 })
 export class TemplateDrivenFormExample {
   persons: EPerson[] = [];
+  currentPerson : EPerson= {
+    givenName: '',
+    surName: '',
+    age: '',
+    email: '',
+    education: ''
+  };
 
   onPerson(data: EPerson) {
     this.persons.push(data)
+    this.currentPerson =data;
     console.log("Father", this.persons);
   }
 }
